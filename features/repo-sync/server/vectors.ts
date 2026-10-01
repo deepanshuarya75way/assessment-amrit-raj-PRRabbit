@@ -2,7 +2,6 @@
 import type { CodeChunk } from "@/features/reviews/types/review";
 import { getPineconeIndex } from "@/features/pinecone/client";
 
-
 const UPSERT_BATCH_SIZE = 90;
 
 

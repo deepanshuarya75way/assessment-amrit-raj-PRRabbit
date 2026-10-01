@@ -25,7 +25,7 @@ export type InstallationReposPage = {
 
 
 function mapRepo(repo: {
-  id: number;
+  id: BigInt;
   name: string;
   full_name: string;
   private?: boolean;
@@ -60,6 +60,7 @@ export async function getInstallationReposPage(
   });
 
   const totalCount = data.total_count;
+ //@ts-ignore
   const repos = data.repositories.map(mapRepo);
 
   return {
